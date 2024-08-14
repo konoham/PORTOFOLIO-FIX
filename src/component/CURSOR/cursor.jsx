@@ -28,11 +28,8 @@ const Cursor = () => {
 
   return (
     <>
-      <div id="cursor" className="  w-4 h-4 bg-primary"></div>
-      <div
-        id="cursor-outline"
-        className="  w-[30px] h-[30px] border-2 border-treed p-4"
-      ></div>
+      <div id="cursor" className="relative z-[999] size-4 bg-primary"></div>
+      <div id="cursor-outline" className="  w-[30px] h-[30px] border-2 border-treed p-4"></div>
     </>
   );
 };

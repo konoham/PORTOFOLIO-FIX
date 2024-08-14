@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer {
+  @import url("https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@300&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=New+Amsterdam&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+  #nav1 > div > ul > li {
+    writing-mode: vertical-lr;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -11,8 +20,6 @@ body {
   padding: 0;
   font-size: 15px;
   font-family: "Montserrat", sans-serif;
-<<<<<<< HEAD
-=======
   cursor: none;
 }
 
@@ -36,7 +43,6 @@ body {
 #blur {
   background-color: transparent;
   backdrop-filter: blur(2px);
->>>>>>> fffa26f (membuat custom cursor dan custom bg)
 }
 
 #main-container {
@@ -63,21 +69,11 @@ body {
   }
 }
 
-#skill {
-<<<<<<< HEAD
-  display: grid;
-  grid-template: 50px 1fr/ 250px 1fr;
-  grid-template-areas:
-    "title title"
-    "tackstack library";
-=======
->>>>>>> fffa26f (membuat custom cursor dan custom bg)
+.skill {
   position: relative;
   z-index: 1;
 }
 
-<<<<<<< HEAD
-=======
 #stack {
   width: 100%;
   padding: 1rem;
@@ -96,7 +92,6 @@ body {
   cursor: pointer;
 }
 
->>>>>>> fffa26f (membuat custom cursor dan custom bg)
 #title {
   grid-area: title;
 }
@@ -104,16 +99,10 @@ body {
 .skill::before {
   content: "";
   width: 100px;
-<<<<<<< HEAD
   height: 100px;
   position: absolute;
-  left: 0;
-=======
-  height: 200px;
-  position: absolute;
-  left: -1rem;
->>>>>>> fffa26f (membuat custom cursor dan custom bg)
-  top: -11%;
+  left: -16px;
+  top: 0%;
   z-index: 3;
   background-color: #efae2e;
   border-bottom-right-radius: 18px;
@@ -128,23 +117,16 @@ ul > li {
   box-sizing: border-box;
   position: relative;
 }
-<<<<<<< HEAD
-#library {
-=======
 #card {
->>>>>>> fffa26f (membuat custom cursor dan custom bg)
   grid-area: library;
 }
 
 #header {
   grid-area: header;
   box-sizing: border-box;
-<<<<<<< HEAD
-=======
   z-index: 99999;
->>>>>>> fffa26f (membuat custom cursor dan custom bg)
 }
-#navbar {
+#nav1 {
   grid-area: navbar;
   height: calc(100% - 50px);
 }
@@ -158,11 +140,6 @@ hr {
 
 #sapaan {
   letter-spacing: 0.2rem;
-}
-
-#navbar > div > ul > li {
-  writing-mode: vertical-lr;
-  font-family: "Oswald", sans-serif;
 }
 
 /* #img {
@@ -251,16 +228,6 @@ input:focus {
   position: relative;
 }
 
-<<<<<<< HEAD
-#slide div {
-  display: inline-block;
-  animation: 6s slide infinite linear;
-}
-
-#slide div span {
-  margin: 0 0.5rem;
-  background-color: #efae2e;
-=======
 .slider-container {
   margin: 0 auto;
   overflow: hidden;
@@ -288,23 +255,16 @@ input:focus {
   width: 100%;
   height: 100%;
   object-fit: cover;
->>>>>>> fffa26f (membuat custom cursor dan custom bg)
 }
 
 @keyframes slide {
   0% {
-<<<<<<< HEAD
-    transform: translateX(0%);
-=======
     transform: translateX(0);
->>>>>>> fffa26f (membuat custom cursor dan custom bg)
   }
   100% {
     transform: translateX(-100%);
   }
 }
-<<<<<<< HEAD
-=======
 
 #cursor,
 #cursor-outline {
@@ -318,20 +278,7 @@ input:focus {
 }
 
 #cursor {
-  clip-path: polygon(
-    33% 0%,
-    66% 0%,
-    66% 33%,
-    100% 33%,
-    100% 66%,
-    66% 66%,
-    66% 100%,
-    33% 100%,
-    33% 66%,
-    0% 66%,
-    0% 33%,
-    33% 33%
-  );
+  clip-path: polygon(33% 0%, 66% 0%, 66% 33%, 100% 33%, 100% 66%, 66% 66%, 66% 100%, 33% 100%, 33% 66%, 0% 66%, 0% 33%, 33% 33%);
 }
 
 @media screen and (max-width: 600px) {
@@ -350,8 +297,6 @@ input:focus {
     display: none;
   }
 
-  #tackstack {
-  }
   #stack {
     width: 100%;
   }
@@ -420,4 +365,23 @@ input:focus {
     margin: 0;
   }
 }
->>>>>>> fffa26f (membuat custom cursor dan custom bg)
+
+.bounce {
+  animation: bounce-custom 500 ease-in-out infinite;
+}
+
+@keyframes bounce-custom {
+  0%,
+  100% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(-10px); /* Sesuaikan nilai ini untuk mengubah jarak lompatan */
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounce-custom {
+  animation: bounce-custom 1s infinite;
+}

@@ -1,45 +1,5 @@
 const CardPlay = () => {
   return (
-<<<<<<< HEAD
-    <div className="w-2/3 mx-auto overflow-x-hidden flex  whitespace-nowrap">
-      <div className="" id="slide">
-        <div>
-          <span>afhauf</span>
-          <span>REACT FORM</span>
-          <span>REACT HOOK</span>
-          <span>HOOK FORM</span>
-          <span>REA FORM</span>
-          <span>aff</span>
-          <span>RE FORM</span>
-          <span>RE FORM</span>
-          <span>RE FORM</span>
-          <span>RE FORM</span>
-          <span>RE FORM</span>
-          <span>RE FORM</span>
-          <span>RE FORM</span>
-          <span>RE FORM</span>
-          <span>T FORM</span>
-        </div>
-      </div>
-
-      <div className="" id="slide">
-        <div>
-          <span>afhauf</span>
-          <span>REACT FORM</span>
-          <span>REACT HOOK</span>
-          <span>HOOK FORM</span>
-          <span>REA FORM</span>
-          <span>aff</span>
-          <span>RE FORM</span>
-          <span>RE FORM</span>
-          <span>RE FORM</span>
-          <span>RE FORM</span>
-          <span>RE FORM</span>
-          <span>RE FORM</span>
-          <span>RE FORM</span>
-          <span>RE FORM</span>
-          <span>T FORM</span>
-=======
     <div
       className="slider-container md:w-2/3
      w-full"
@@ -120,7 +80,6 @@ const CardPlay = () => {
           <div>
             <img src="./slider/12.png" alt="" />
           </div>
->>>>>>> fffa26f (membuat custom cursor dan custom bg)
         </div>
       </div>
     </div>

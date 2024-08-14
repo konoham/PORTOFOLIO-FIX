@@ -1,7 +1,8 @@
 import Swal from "sweetalert2";
 import emailjs from "@emailjs/browser";
 
-export const SendEmail = (form, e) => {
+export const SendEmail = (form, e, setIsLoading) => {
+  setIsLoading(true);
   e.preventDefault();
   emailjs
     .sendForm("service_kj2o1hf", "template_idtsf97", form.current, {
@@ -15,6 +16,7 @@ export const SendEmail = (form, e) => {
           icon: "success",
         });
 
+        setIsLoading(false);
         window.history.pushState({}, document.title, window.location.pathname);
       },
       () => {

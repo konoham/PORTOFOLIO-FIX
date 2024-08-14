@@ -1,25 +1,18 @@
 import { delay, motion } from "framer-motion";
-const nav = ["home", "skill", "portofolio", "contact"];
+import { useState } from "react";
+
+export const nav = [
+  { li: "Home", url: "#main-container" },
+  { li: "Teckstack", url: "#Teckstack" },
+  { li: "Portofolio", url: "#Portofolio" },
+  { li: "Contact", url: "#contact" },
+];
 
 const Navbar = () => {
+  const [visible, setVisible] = useState(false);
+
   const variant = {
     hidden: { x: -100, opacity: 0 },
-<<<<<<< HEAD
-    visible: { x: 0, opacity: 1 },
-    transition: (i) => ({ duration: 1 }),
-  };
-
-  return (
-    <div className="bg-second font-medium" id="navbar">
-      <div className="container m-auto h-full">
-        <motion.ul
-          variants={variant}
-          initial="hidden"
-          animate="visible"
-          transition="transition"
-          className="flex justify-evenly items-center flex-col h-full"
-        >
-=======
     visible: {
       x: 0,
       opacity: 1,
@@ -27,34 +20,33 @@ const Navbar = () => {
   };
 
   return (
-    <div
-      className="bg-second font-medium ms-[-1rem] me-4 box-border"
-      id="navbar"
+    <motion.div
+      variants={variant}
+      initial="hidden"
+      animate={visible ? "visible" : "hidden"}
+      onViewportEnter={() => setVisible(true)}
+      onViewportLeave={() => setVisible(false)}
+      viewport={{ margin: "50px" }}
+      className="bg-second ms-[-1rem] me-4 box-border px-9"
+      id="nav1"
     >
       <div className="container m-auto h-full">
-        <motion.ul className="flex justify-evenly items-center flex-col h-full">
->>>>>>> fffa26f (membuat custom cursor dan custom bg)
+        <motion.ul className="flex justify-evenly text-lg items-center flex-col h-full">
           {nav.map((item, i) => (
             <motion.li
               key={i}
               variants={variant}
-<<<<<<< HEAD
-              transition={{ delay: 0.2 * i }}
-              custom={{ i }}
-=======
               initial="hidden"
-              animate="visible"
+              animate={visible ? "visible" : "hidden"} // Perbaikan
               transition={{ delay: 0.3 * i, duration: 0.6 }}
-              custom={i}
-              viewport={{ once: true }}
->>>>>>> fffa26f (membuat custom cursor dan custom bg)
+              className="tracking-wide hover:text-slate-900"
             >
-              {item}
+              <a href={item.url}>{item.li}</a>
             </motion.li>
           ))}
         </motion.ul>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
