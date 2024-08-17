@@ -29,20 +29,24 @@ const Card = () => {
             className="w-[300px] h-fit  box-border border shadow-sm rounded-lg bg-card text-treed relative"
           >
             <div className="relative shadow-sm">
-              <motion.img variants={variant} viewport={{ once: true }} initial="hidden" whileInView="visible" src={item.img} className="h-[150px] w-full object-cover" />
+              <a target="_blank" href={item.github}>
+                <motion.img variants={variant} viewport={{ once: true }} initial="hidden" whileInView="visible" src={item.img} className="h-[150px] w-full object-cover" />
+              </a>
               <motion.p variants={variant} viewport={{ once: true }} transition="transition" whileInView="visible" className="bg-primary p-2 rounded-e-lg absolute left-0 bottom-0">
                 #{i + 1}
               </motion.p>
             </div>
             <div className="px-4 py-2">
-              <motion.h1 variants={variant} viewport={{ once: true }} transition="transition" whileInView="visible" className="text-treed font-bold">
-                {item.title}
-              </motion.h1>
+              <a target="_blank" href={item.github}>
+                <motion.h1 variants={variant} viewport={{ once: true }} transition="transition" whileInView="visible" className="text-treed font-bold">
+                  {item.title}
+                </motion.h1>
+              </a>
               <motion.p variants={variant} viewport={{ once: true }} transition="transition" whileInView="visible" className="text-sm">
                 {item.deskripsi}
               </motion.p>
               <motion.div variants={variant} viewport={{ once: true }} transition="transition" whileInView="visible" className="flex justify-between items-center mt-2">
-                <Url item={item.url} />
+                <Url item={item.website} />
                 <Detail item={item.library} />
               </motion.div>
             </div>

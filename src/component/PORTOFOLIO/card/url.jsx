@@ -1,11 +1,8 @@
-import { ArrowRight } from "@phosphor-icons/react";
+import { ArrowRight, GithubLogo } from "@phosphor-icons/react";
 
 const Url = ({ item }) => {
   return (
-    <a
-      href={item}
-      className="flex justify-center items-center gap-1 border-b border-treed"
-    >
+    <a target="_blank" href={item} className="flex justify-center items-center gap-1 border-b border-treed">
       visit{" "}
       <span>
         <ArrowRight size={16} />

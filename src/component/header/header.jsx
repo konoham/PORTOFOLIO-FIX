@@ -1,6 +1,7 @@
-import { GithubLogo, InstagramLogo, LinkedinLogo, YoutubeLogo } from "@phosphor-icons/react";
+import { GithubLogo, Hamburger, InstagramLogo, LinkedinLogo, List, YoutubeLogo } from "@phosphor-icons/react";
 import { nav } from "../HERO/navbar/Navbar";
 import { useEffect, useState } from "react";
+
 const navSocial = [
   {
     icon: <InstagramLogo size={32} />,
@@ -24,36 +25,56 @@ const Header = () => {
   const [view, setView] = useState(false);
 
   const handleView = () => {
-    if (window.scrollY >= 500) {
-      setView(true);
+    if (window.screen.width > 390) {
+      if (window.scrollY >= 500) {
+        setView(true);
+      } else {
+        setView(false);
+      }
     } else {
-      setView(false);
+      return;
     }
   };
 
-  window.addEventListener("scroll", handleView);
+  console.log(window.screen.width);
+
+  const setHandleView = () => {
+    setView((prev) => !prev);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleView);
+    return () => window.removeEventListener("scroll", handleView);
+  }, []);
 
   return (
-    <header className="h-[50px] shadow-md font-bold fixed top-0 left-0 right-0 text-primary backdrop-blur-sm" id="header">
-      <div className="container mx-auto h-full">
-        <div className="flex justify-between items-center h-full">
-          <a href="/" className="text-2xl text-primary hover:text-second">
-            Rabani
-          </a>
-          <div className={` ${view ? "flex justify-center items-center gap-5 " : "hidden"}`}>
-            {nav.map((e, i) => (
-              <a key={i} href={e.url} className="hover:text-second">
-                {e.li}
-              </a>
-            ))}
-          </div>
-          <div className="flex justify-center items-center gap-5 ">
-            {navSocial.map((e, i) => (
-              <a key={i} href={e.url} className="hover:text-second">
-                {e.icon}
-              </a>
-            ))}
-          </div>
+    <header className="fixed top-0 left-0 right-0 z-50 h-[50px] bg-white shadow-md text-primary backdrop-blur-sm md:h-[60px]">
+      <div className="container mx-auto flex h-full items-center justify-between px-4 md:px-8">
+        <a href="/" className="text-xl font-bold text-primary hover:text-second md:text-2xl">
+          Rabani
+        </a>
+
+        <div
+          className={`${
+            view ? "flex md:scale-100" : "hidden md:scale-0"
+          } absolute md:w-full md:ms-16 w-[200px] transition-all pt-8  right-0 top-full md:bg-transparent text-black md:text-primary md:static rounded-s-lg shadow-md md:h-full md:shadow-none bg-background h-svh flex-col md:pt-2 items-center gap-5 sm:flex-row sm:justify-center md:flex`}
+        >
+          {nav.map((e, i) => (
+            <a key={i} href={e.url} className="text-sm font-semibold hover:text-second md:text-base">
+              {e.li}
+            </a>
+          ))}
+        </div>
+
+        <div className="flex items-center justify-center gap-4">
+          {navSocial.map((e, i) => (
+            <a target="_blank" onClick={setHandleView} key={i} href={e.url} className="hover:text-second">
+              {e.icon}
+            </a>
+          ))}
+          <button onClick={setHandleView}>
+            <List size={32} className="md:hidden block" />
+          </button>
         </div>
       </div>
     </header>

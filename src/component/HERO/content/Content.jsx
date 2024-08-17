@@ -44,11 +44,11 @@ const Hero = () => {
     },
   };
   return (
-    <section className="h-svh text-start w-full " id="content">
+    <section className="h-svh text-start w-svw md:w-full md:px-0 pe-2" id="content">
       <div className="flex justify-between items-center md:flex-row flex-col-reverse gap-0 w-full md:container md:mx-auto h-svh ">
         <div className="content text-base font-medium md:text-2xl md:ps-20 w-full md:w-3/5">
-          <motion.h1 variants={variant} initial="hidden" animate="visible" transition={{ duration: 0.5 }} className="text-3xl md:text-5xl font-bold text-treed mb-1" id="sapaan">
-            Hi there✋,
+          <motion.h1 variants={variant} initial="hidden" animate="visible" transition={{ duration: 0.5 }} className="text-3xl md:text-5xl font-bold text-second mb-1" id="sapaan">
+            Hi There✋,
           </motion.h1>
           <motion.h1 variants={variant} initial="hidden" animate="visible" transition={{ duration: 0.6 }} className="text-xl md:text-3xl font-bold mb-1 w-full" id="name">
             My Name is <span className="text-second italic" ref={dynamicName}></span>
@@ -56,15 +56,15 @@ const Hero = () => {
           <motion.h1 variants={variant} initial="hidden" animate="visible" transition={{ duration: 0.7 }} className="text-xl mb-2 md:text-3xl font-semibold">
             I`m A <span ref={dynamicText}></span>
           </motion.h1>
-          <motion.p variants={variant} initial="hidden" animate="visible" transition={{ duration: 0.8 }} className="text-treed indent-4 text-base md:text-lg leading-relaxed w-full md:w-[85%]">
+          <motion.p variants={variant} initial="hidden" animate="visible" transition={{ duration: 0.8 }} className="text-treed md:indent-4 text-base md:text-lg leading-relaxed w-[90%] mb-2 md:w-[85%]">
             I am a front-end web developer specializing in JavaScript and TypeScript, with expertise in frameworks like React.js and Next.js. I also have experience in backend development using Express.js and Node.js.
           </motion.p>
           <motion.button variants={variant} initial="hidden" animate="visible" transition={{ duration: 1 }} className="rounded-lg bg-second text-treed px-4 py-2 text-sm mt-2">
             Download CV
           </motion.button>
         </div>
-        <motion.div variants={variant} initial="hidden" animate="visible" transition={{ delay: 0.2, duration: 0.8 }} className="img mt-4 w-full md:w-2/5" id="img">
-          <img src="./profil.png" className="rounded-full block mx-auto " id="profil" />
+        <motion.div variants={variant} initial="hidden" animate="visible" transition={{ delay: 0.2, duration: 0.8 }} className="img mt-4 block w-4/5 mx-auto md:px-0 pe-4 md:w-2/5" id="img">
+          <img src="./profil.png" className="rounded-full  mx-auto " id="profil" />
         </motion.div>
       </div>
     </section>

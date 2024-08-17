@@ -27,7 +27,7 @@ const Navbar = () => {
       onViewportEnter={() => setVisible(true)}
       onViewportLeave={() => setVisible(false)}
       viewport={{ margin: "50px" }}
-      className="bg-second ms-[-1rem] me-4 box-border px-9"
+      className="bg-second hidden md:block ms-[-1rem] me-4 box-border px-9"
       id="nav1"
     >
       <div className="container m-auto h-full">

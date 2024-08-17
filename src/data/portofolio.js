@@ -17,11 +17,11 @@ const DataPortofolio = [
   },
   {
     title: "AROMA-CAFFE",
-    img: "./profil.png",
-    website: "https://www.youtube.com/watch?v=u95IvYiFLyU",
+    img: "./aroma.png",
+    website: "https://aroma-caffe.vercel.app/",
     github: "https://github.com/konoham/caffe",
     library: ["javascript", "react js + vite", "express js", "Tailwind css"],
-    deskripsi: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi excepturi voluptates illum, minus esse perferendis saepe temporibus assumenda harum adipisci sunt itaque repellendus neque eum.",
+    deskripsi: "Aroma-Cafe adalah situs e-commerce yang berfokus pada penjualan kopi dan menu spesial lainnya. Website ini dibangun menggunakan React.js, Vite, dan Tailwind CSS.",
   },
 ];
 
