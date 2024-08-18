@@ -59,9 +59,17 @@ const Hero = () => {
           <motion.p variants={variant} initial="hidden" animate="visible" transition={{ duration: 0.8 }} className="text-treed md:indent-4 text-base md:text-lg leading-relaxed w-[90%] mb-2 md:w-[85%]">
             I am a front-end web developer specializing in JavaScript and TypeScript, with expertise in frameworks like React.js and Next.js. I also have experience in backend development using Express.js and Node.js.
           </motion.p>
-          <motion.button variants={variant} initial="hidden" animate="visible" transition={{ duration: 1 }} className="rounded-lg bg-second text-treed px-4 py-2 text-sm mt-2">
+          <motion.a
+            href="https://drive.google.com/file/d/1BpVPM-KELRsxP5e6klPOksDHIr9peEI5/view?usp=sharing"
+            target="_blank"
+            variants={variant}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 1 }}
+            className="rounded-lg bg-second text-treed px-4 py-2 text-sm mt-2"
+          >
             Download CV
-          </motion.button>
+          </motion.a>
         </div>
         <motion.div variants={variant} initial="hidden" animate="visible" transition={{ delay: 0.2, duration: 0.8 }} className="img mt-4 md:mt-1 rounded-full block w-4/5 mx-auto md:px-0 pe-4 md:w-2/5 h-fit" id="img">
           <img src="./profil1.png" className="rounded-full size-2/3 -mt-2 mx-auto " id="profil" />
