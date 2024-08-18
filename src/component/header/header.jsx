@@ -48,7 +48,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 h-[50px] bg-white shadow-md text-primary backdrop-blur-sm md:h-[60px]">
+    <header className={`fixed top-0 left-0 right-0 z-50 h-[50px] ${view ? "bg-white" : "bg-transparent"}  shadow-md text-primary backdrop-blur-sm md:h-[60px]`}>
       <div className="container mx-auto flex h-full items-center justify-between px-4 md:px-8">
         <a href="/" className="text-xl font-bold text-primary hover:text-second md:text-2xl">
           Rabani

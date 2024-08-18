@@ -63,8 +63,8 @@ const Hero = () => {
             Download CV
           </motion.button>
         </div>
-        <motion.div variants={variant} initial="hidden" animate="visible" transition={{ delay: 0.2, duration: 0.8 }} className="img mt-4 rounded-full block w-4/5 mx-auto md:px-0 pe-4 md:w-2/5 h-fit" id="img">
-          <img src="./profil1.png" className="rounded-full size-2/3 mx-auto " id="profil" />
+        <motion.div variants={variant} initial="hidden" animate="visible" transition={{ delay: 0.2, duration: 0.8 }} className="img mt-4 md:mt-1 rounded-full block w-4/5 mx-auto md:px-0 pe-4 md:w-2/5 h-fit" id="img">
+          <img src="./profil1.png" className="rounded-full size-2/3 -mt-2 mx-auto " id="profil" />
         </motion.div>
       </div>
     </section>
