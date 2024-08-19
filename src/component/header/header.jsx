@@ -1,6 +1,6 @@
 import { GithubLogo, Hamburger, InstagramLogo, LinkedinLogo, List, YoutubeLogo } from "@phosphor-icons/react";
 import { nav } from "../HERO/navbar/Navbar";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const navSocial = [
   {
@@ -23,6 +23,17 @@ const navSocial = [
 
 const Header = () => {
   const [view, setView] = useState(false);
+  const sidebar = useRef(null);
+  const triger = useRef(null);
+  const handleClose = (event) => {
+    if (sidebar.current && !sidebar.current.contains(event.target) && triger.current && !triger.current.contains(event.target)) {
+      console.log("click window");
+
+      setView(false);
+    }
+  };
+
+  window.addEventListener("click", handleClose);
 
   const handleView = () => {
     if (window.screen.width > 390) {
@@ -55,6 +66,7 @@ const Header = () => {
         </a>
 
         <div
+          ref={sidebar}
           className={`${
             view ? "flex md:scale-100" : "hidden md:scale-0"
           } absolute md:w-full md:ms-16 w-[200px] transition-all pt-8  right-0 top-full md:bg-transparent text-black md:text-primary md:static rounded-s-lg shadow-md md:h-full md:shadow-none bg-background h-svh flex-col md:pt-2 items-center gap-5 sm:flex-row sm:justify-center md:flex`}
@@ -72,7 +84,7 @@ const Header = () => {
               {e.icon}
             </a>
           ))}
-          <button onClick={setHandleView}>
+          <button onClick={setHandleView} ref={triger}>
             <List size={32} className="md:hidden block" />
           </button>
         </div>
