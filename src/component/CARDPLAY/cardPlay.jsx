@@ -42,6 +42,18 @@ const CardPlay = () => {
           <div>
             <img src="./slider/12.png" alt="" />
           </div>
+          <div>
+            <img src="./slider/express.png" alt="" />
+          </div>
+          <div>
+            <img src="./slider/testing.webp" alt="" />
+          </div>
+          <div>
+            <img src="./slider/redux.jpg" alt="" />
+          </div>
+          <div>
+            <img src="./slider/tanstack.png" alt="" />
+          </div>
         </div>
         <div className="slide-track">
           <div>
@@ -79,6 +91,18 @@ const CardPlay = () => {
           </div>
           <div>
             <img src="./slider/12.png" alt="" />
+          </div>
+          <div>
+            <img src="./slider/express.png" alt="" />
+          </div>
+          <div>
+            <img src="./slider/testing.webp" alt="" />
+          </div>
+          <div>
+            <img src="./slider/redux.jpg" alt="" />
+          </div>
+          <div>
+            <img src="./slider/tanstack.png" alt="" />
           </div>
         </div>
       </div>

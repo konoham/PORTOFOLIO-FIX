@@ -63,7 +63,7 @@ const TackStack = () => {
         </motion.div>
         {/* bootstrap */}
         <motion.div variants={variant} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="flex justify-center items-center md:gap-2 md:mb-10" id="stack">
-          <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" className="hover:fill-[#8210F5]">
+          <svg className="hover:fill-[#8210F5]" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
             <g fill="#000">
               <path d="m12.67 12.75h-2.17v2.67h2.17c.74 0 1.33-.6 1.33-1.33s-.6-1.34-1.33-1.34z" />
               <path d="m12.67 8.57812h-2.17v2.66998h2.17c.74 0 1.33-.5999 1.33-1.32995 0-.73-.6-1.34003-1.33-1.34003z" />

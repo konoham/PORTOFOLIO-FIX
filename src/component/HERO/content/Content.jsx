@@ -59,7 +59,16 @@ const Hero = () => {
           <motion.p variants={variant} initial="hidden" animate="visible" transition={{ duration: 0.8 }} className="text-treed md:indent-4 text-base md:text-lg leading-relaxed w-[90%] mb-2 md:w-[85%]">
             I am a front-end web developer specializing in JavaScript and TypeScript, with expertise in frameworks like React.js and Next.js. I also have experience in backend development using Express.js and Node.js.
           </motion.p>
-          <motion.a href="/cv.pdf" download target="_blank" variants={variant} initial="hidden" animate="visible" transition={{ duration: 1 }} className="rounded-lg bg-second text-treed px-4 py-2 text-sm mt-2">
+          <motion.a
+            href="/cv.pdf"
+            download
+            target="_blank"
+            variants={variant}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 1 }}
+            className="rounded-lg border border-black shadow-sm btn_effect overflow-hidden px-4 py-2 text-sm mt-2 hover:text-white"
+          >
             Download CV
           </motion.a>
         </div>

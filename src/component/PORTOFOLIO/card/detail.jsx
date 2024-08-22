@@ -19,19 +19,11 @@ const Detail = ({ item }) => {
 
   return (
     <>
-      <details
-        ref={detailsRef}
-        className="text-sm"
-        onClick={() => setIsClose(false)}
-      >
+      <details ref={detailsRef} className="text-sm" onClick={() => setIsClose(false)}>
         <summary className="list-none cursor-pointer">
           <DotsThreeVertical size={20} />
         </summary>
-        <ul
-          className={`absolute top-[95%] left-[95%] z-[60] border-primary border-2 py-2 px-8 box-border w-fit shadow-sm bg-transparent backdrop-blur-sm rounded-md ${
-            isClose ? "hidden" : ""
-          }`}
-        >
+        <ul className={`absolute top-[95%] left-[95%] z-[60] border-primary border-2 py-2 px-8 box-border w-fit shadow-sm bg-transparent backdrop-blur-sm rounded-md ${isClose ? "hidden" : ""}`}>
           {item?.map((items, i) => (
             <li key={i}>{items}</li>
           ))}

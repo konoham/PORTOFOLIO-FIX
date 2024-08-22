@@ -34,7 +34,7 @@ function App() {
        items-center flex-col "
         >
           <div className="w-full h-full">
-            <Title title={"PORTOFOLIO"} />
+            <Title id={"title"} title={"PORTOFOLIO"} />
             <Card />
           </div>
         </section>

@@ -38,14 +38,14 @@ const Card = () => {
             </div>
             <div className="px-4 py-2">
               <a target="_blank" href={item.github}>
-                <motion.h1 variants={variant} viewport={{ once: true }} transition="transition" whileInView="visible" className="text-treed font-bold">
+                <motion.h1 variants={variant} viewport={{ once: true }} transition="transition" whileInView="visible" className="text-treed font-bold hover:text-second">
                   {item.title}
                 </motion.h1>
               </a>
               <motion.p variants={variant} viewport={{ once: true }} transition="transition" whileInView="visible" className="text-sm">
                 {item.deskripsi}
               </motion.p>
-              <motion.div variants={variant} viewport={{ once: true }} transition="transition" whileInView="visible" className="flex justify-between items-center mt-2">
+              <motion.div variants={variant} viewport={{ once: true }} transition="transition" whileInView="visible" className="flex justify-between items-center mt-2 ">
                 <Url item={item.website} />
                 <Detail item={item.library} />
               </motion.div>

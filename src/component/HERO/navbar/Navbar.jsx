@@ -41,7 +41,7 @@ const Navbar = () => {
               transition={{ delay: 0.3 * i, duration: 0.6 }}
               className="tracking-wide anav hover:text-slate-900"
             >
-              <a href={item.url} className="after:bg-black after:w-[2.5px] after:-bottom-3 after:h-full after:top-0 left-0 hover:h-full">
+              <a href={item.url} className="after:bg-black after:w-[2px] after:-bottom-3 after:h-0 after:top-0 left-0 ">
                 {item.li}
               </a>
             </motion.li>
