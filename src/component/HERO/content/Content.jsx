@@ -8,9 +8,9 @@ const Hero = () => {
 
   useEffect(() => {
     const typed = new Typed(dynamicText.current, {
-      strings: ["Frond end dev.", "web developer"],
+      strings: ["Frond end dev.", "backend developer", "Fullstact developer", "web developer"],
 
-      typeSpeed: 200,
+      typeSpeed: 250,
       backDelay: 100,
       backSpeed: 300,
       loop: true,

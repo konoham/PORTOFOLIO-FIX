@@ -59,6 +59,20 @@ body {
   animation: 15s blop infinite linear;
 }
 
+.anav a {
+  position: relative;
+}
+
+.anav a::after {
+  content: "";
+  position: absolute;
+  transition: 0.3s;
+}
+
+.anav a:hover::after {
+  height: 100%;
+}
+
 @keyframes blop {
   0%,
   100% {
